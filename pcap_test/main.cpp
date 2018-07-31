@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     return -1;
   }
   
-  while (1) {
+  while (true) {
     struct pcap_pkthdr* header;
     struct ip* iph;
     const u_char* packet;
