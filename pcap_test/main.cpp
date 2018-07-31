@@ -13,11 +13,13 @@ void usage() {
 
 void mac_print(unsigned char mac[]) {
   int i;
-    for(i=0;i<ETH_ALEN-1;i++) {
-      printf("%X:",mac[i]);
-  }
-    printf("%X\n",mac[i]);
-
+    for(i=0;i<=ETH_ALEN;i++) {
+        if(i==5){
+                printf("%X\n",mac[i]);
+                continue;
+        	}
+     	printf("%X:",mac[i]);
+	}
 }
 
 int main(int argc, char* argv[]) {
